@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App</title>
+</head>
+
+<body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '551223208631392',
+                xfbml: true,
+                version: 'v2.6'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <h1 style="text-align: center">This is awesome</h1>
+    Name: <input type="text" name="name" id="name"> Age: <input type="text" name="age" id="age">
+    <button type="button" id="btn">Send</button>
+    <button type="button" id="btn2">Get data</button>
+    <button type="button" id="btn3">Update data</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="googleSignin()">Google Signin</button>
+    <button onclick="googleSignout()">Google Signout</button>
+    <br>
+    <br>
+    <br>
+    <button style="background-color:blue" onclick="facebookSignin()">Facebook Signin</button>
+    <button style="background-color:blue" onclick="facebookSignout()">Facebook Signout</button>
+
+    <h2 id="data"></h2>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-auth.js"></script>
+
+
+    <script src="main.js"></script>
+</body>
+
+
+</html>
